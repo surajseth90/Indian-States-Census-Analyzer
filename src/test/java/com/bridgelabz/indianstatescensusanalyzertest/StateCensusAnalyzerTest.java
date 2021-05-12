@@ -63,4 +63,11 @@ public class StateCensusAnalyzerTest {
 			Assert.assertEquals(CensusAnalyserException.CensusExceptionType.CSV_HEADER, e.type);
 		}
 	}
+	
+	@Test
+	public void givenStateCodeCSVFile_WhenNumberOfRecordMatches_ShouldReturnTrue() throws CensusAnalyserException, IOException {
+		StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+		int numberOfRecords = stateCensusAnalyser.stateCodeCSVFile();
+		Assert.assertEquals(30, numberOfRecords);
+	}
 }
