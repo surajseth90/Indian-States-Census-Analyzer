@@ -64,7 +64,4 @@ public class CSVStateCensus {
 		return "CSVStateCensus [SrNo =" + getSrNo() + ",state = "+getState() +"Population = "+getPopulation() 
 						+ "AreaInSqKm = " + getAreaInSqKm()+" DensityPerSqKm = "+ getDensityPerSqKm() +"]" ;
 	}
-
-
-
 }
