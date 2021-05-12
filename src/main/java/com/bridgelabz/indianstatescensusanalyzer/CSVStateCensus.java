@@ -61,7 +61,7 @@ public class CSVStateCensus {
 
 	@Override
 	public String toString() {
-		return "CSVStateCensus [SrNo =" + getSrNo() + ",state = "+getState() +"Population = "+getPopulation() 
-						+ "AreaInSqKm = " + getAreaInSqKm()+" DensityPerSqKm = "+ getDensityPerSqKm() +"]" ;
+		return "CSVStateCensus [SrNo =" + getSrNo() + ",state = " + getState() + "Population = " + getPopulation()
+				+ "AreaInSqKm = " + getAreaInSqKm() + " DensityPerSqKm = " + getDensityPerSqKm() + "]";
 	}
 }

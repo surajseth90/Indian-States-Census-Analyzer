@@ -3,15 +3,15 @@ package com.bridgelabz.indianstatescensusanalyzer;
 import com.opencsv.bean.CsvBindByName;
 
 public class CSVStateCode {
-	
+
 	@CsvBindByName(column = "SrNo", required = true)
-    public String srNo;
+	public String srNo;
 
-    @CsvBindByName(column = "State Name", required = true)
-    public String stateName;
+	@CsvBindByName(column = "State Name", required = true)
+	public String stateName;
 
-    @CsvBindByName(column = "TIN", required = true)
-    public String tin;
+	@CsvBindByName(column = "TIN", required = true)
+	public String tin;
 
 	public String getSrNo() {
 		return srNo;
@@ -41,7 +41,5 @@ public class CSVStateCode {
 	public String toString() {
 		return "CSVStateCode [srNo=" + srNo + ", stateName=" + stateName + ", tin=" + tin + "]";
 	}
-    
-    
 
 }

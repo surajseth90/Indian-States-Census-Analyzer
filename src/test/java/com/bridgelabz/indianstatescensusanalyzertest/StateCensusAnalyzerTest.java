@@ -13,7 +13,7 @@ public class StateCensusAnalyzerTest {
 	@Test
 	public void givenCSVFile_WhenNumberOfRecordMatches_ShouldReturnTrue() throws CensusAnalyserException, IOException {
 		StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
-		int numberOfRecords = stateCensusAnalyser.numberOfEntriesInCSVFile();
+		int numberOfRecords = stateCensusAnalyser.stateCensusCSVFile();
 		Assert.assertEquals(30, numberOfRecords);
 	}
 
@@ -22,7 +22,7 @@ public class StateCensusAnalyzerTest {
 			throws CensusAnalyserException, IOException {
 		StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
 		try {
-			int numberOfRecords = stateCensusAnalyser.numberOfEntriesInCSVFile();
+			int numberOfRecords = stateCensusAnalyser.stateCensusCSVFile();
 		} catch (CensusAnalyserException e) {
 			e.printStackTrace();
 			Assert.assertEquals(CensusAnalyserException.CensusExceptionType.NO_SUCH_FILE, e.type);
@@ -34,7 +34,7 @@ public class StateCensusAnalyzerTest {
 			throws CensusAnalyserException, IOException {
 		StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
 		try {
-			int numberOfRecords = stateCensusAnalyser.numberOfEntriesInCSVFile();
+			int numberOfRecords = stateCensusAnalyser.stateCensusCSVFile();
 		} catch (CensusAnalyserException e) {
 			e.printStackTrace();
 			Assert.assertEquals(CensusAnalyserException.CensusExceptionType.INCORRECT_DATA_ISSUE, e.type);
@@ -46,7 +46,7 @@ public class StateCensusAnalyzerTest {
 			throws CensusAnalyserException, IOException {
 		StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
 		try {
-			int numberOfRecords = stateCensusAnalyser.numberOfEntriesInCSVFile();
+			int numberOfRecords = stateCensusAnalyser.stateCensusCSVFile();
 		} catch (CensusAnalyserException e) {
 			e.printStackTrace();
 			Assert.assertEquals(CensusAnalyserException.CensusExceptionType.DELIMITER_ISSUE, e.type);
@@ -57,7 +57,7 @@ public class StateCensusAnalyzerTest {
 			throws CensusAnalyserException, IOException {
 		StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
 		try {
-			int numberOfRecords = stateCensusAnalyser.numberOfEntriesInCSVFile();
+			int numberOfRecords = stateCensusAnalyser.stateCensusCSVFile();
 		} catch (CensusAnalyserException e) {
 			e.printStackTrace();
 			Assert.assertEquals(CensusAnalyserException.CensusExceptionType.CSV_HEADER, e.type);
