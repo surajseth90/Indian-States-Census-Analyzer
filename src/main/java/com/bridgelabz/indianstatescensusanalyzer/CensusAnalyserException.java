@@ -3,11 +3,10 @@ package com.bridgelabz.indianstatescensusanalyzer;
 @SuppressWarnings("serial")
 public class CensusAnalyserException extends Exception {
 
-	enum CensusExceptionType{
+	public enum CensusExceptionType{
         NO_SUCH_FILE, INCORRECT_DATA_ISSUE ,DELIMITER_ISSUE, CSV_HEADER
     }
-    CensusExceptionType type;
-    private String message;
+   public CensusExceptionType type;
 
     public CensusAnalyserException() {
     }

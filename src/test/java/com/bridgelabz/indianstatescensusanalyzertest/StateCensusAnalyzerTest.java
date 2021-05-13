@@ -13,8 +13,9 @@ public class StateCensusAnalyzerTest {
 	@Test
 	public void givenCSVFile_WhenNumberOfRecordMatches_ShouldReturnTrue() throws CensusAnalyserException, IOException {
 		StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
-		int numberOfRecords = stateCensusAnalyser.stateCensusCSVFile();
-		Assert.assertEquals(30, numberOfRecords);
+		int numberOfRecords	 = stateCensusAnalyser.stateCensusCSVFile();
+		
+		Assert.assertEquals(29, numberOfRecords);
 	}
 
 	@Test
@@ -68,7 +69,7 @@ public class StateCensusAnalyzerTest {
 	public void givenStateCodeCSVFile_WhenNumberOfRecordMatches_ShouldReturnTrue() throws CensusAnalyserException, IOException {
 		StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
 		int numberOfRecords = stateCensusAnalyser.stateCodeCSVFile();
-		Assert.assertEquals(30, numberOfRecords);
+		Assert.assertEquals(37, numberOfRecords);
 	}
 	
 	@Test

@@ -4,9 +4,6 @@ import com.opencsv.bean.CsvBindByName;
 
 public class CSVStateCensus {
 
-	@CsvBindByName(column = "SrNo", required = true)
-	private static String srNo;
-
 	@CsvBindByName(column = "State", required = true)
 	private static String state;
 
@@ -18,14 +15,6 @@ public class CSVStateCensus {
 
 	@CsvBindByName(column = "DensityPerSqKm", required = true)
 	private static int densityPerSqKm;
-
-	public String getSrNo() {
-		return srNo;
-	}
-
-	public void setSrNo(String srNo) {
-		this.srNo = srNo;
-	}
 
 	public static String getState() {
 		return state;
@@ -61,7 +50,8 @@ public class CSVStateCensus {
 
 	@Override
 	public String toString() {
-		return "CSVStateCensus [SrNo =" + getSrNo() + ",state = " + getState() + "Population = " + getPopulation()
+		return "CSVStateCensus [state = " + getState() + "Population = " + getPopulation()
 				+ "AreaInSqKm = " + getAreaInSqKm() + " DensityPerSqKm = " + getDensityPerSqKm() + "]";
 	}
+	
 }

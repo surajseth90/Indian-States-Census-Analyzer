@@ -15,6 +15,21 @@ public class StateCensusAnalyser {
 	private static final String STATE_CODE_PATH = "C:\\Users\\ASUS\\eclipse-workspace\\PP10 Indian States Census Analyzer\\src\\main\\"
 			+ "resources\\StateCode - StateCode.csv";
 
+	public static void main(String [] args) {
+		StateCensusAnalyser analyser = new StateCensusAnalyser();
+		try {
+			System.out.println(analyser.stateCensusCSVFile());
+			System.out.println(analyser.stateCodeCSVFile());
+		} catch (CensusAnalyserException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
 	public int stateCensusCSVFile() throws CensusAnalyserException, IOException {
 		int numberOfEntriesInStateCensus = 0;
 
@@ -60,6 +75,7 @@ public class StateCensusAnalyser {
 			throw new CensusAnalyserException(CensusAnalyserException.CensusExceptionType.INCORRECT_DATA_ISSUE,
 					"incorrect data");
 		}
+		
 		return numberOfEntriesInStateCode;
 	}
 
